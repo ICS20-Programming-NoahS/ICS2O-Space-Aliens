@@ -20,9 +20,9 @@ class SplashScene extends Phaser.Scene {
   }
   
   create (data) {
-    this.splashSceneBackgroundImage = this.addsprite(0,0, "splashSceneBackground")
+    this.splashSceneBackgroundImage = this.add.sprite(0,0, "splashSceneBackground")
     this.splashSceneBackgroundImage.x = 1920 / 2
-    this.splashSceneBackgroundImage.x = 1080 / 2
+    this.splashSceneBackgroundImage.y = 1080 / 2
   }
   
   update (time, delta) {
