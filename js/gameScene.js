@@ -55,8 +55,8 @@ class GameScene extends Phaser.Scene {
 
     // sound
     this.load.audio("laser", "assets/laser.wav")
-    this.load.audio("explosion", "assets/barrelExploding.wav")
-    this.load.audio("bomb", "assets/bomb.wav")
+    this.load.audio("explosion", "assets/explosion.wav")
+    this.load.audio("gameOver", "assets/gameOver.mp3")
   }
   
   create (data) {
@@ -87,7 +87,7 @@ class GameScene extends Phaser.Scene {
 
     // Collisions between ship and aliens
     this.physics.add.collider(this.ship, this.alienGroup, function (shipCollide, alienCollide) {
-      this.sound.play("bomb")
+      this.sound.play("gameOver")
       this.physics.pause()
       alienCollide.destroy()
       shipCollide.destroy()
